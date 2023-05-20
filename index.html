@@ -48,8 +48,9 @@
     <main>
         <article id="secc_buscar">
             <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1" >Íncide base</span>
                 <select id="selector" class="form-select" aria-label="Default select example">
-                    <option selected default disabled>Seleccione Indicador</option>
+                    <option selected default disabled>Seleccione</option>
                     <option value="dolar">Dólar</option>
                     <option value="euro">Euro</option>
                     <option value="ipc">IPC</option>
@@ -57,22 +58,43 @@
                     <option value="tmc">Tasa Int. Máx. Convencional</option>
                     <option value="uf">UF</option>
                     <option value="utm">UTM</option>
-                  </select>            
-                  <input id="input-fechaInicial" type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                  <input id="input-fechaFinal" type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                  <button type="button" class="btn btn-primary">Consultar</button>
-            </div>            
-            <div class="input-group mb-3">
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btncheck1">Mostrar Tabla</label>
-              
-                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btncheck2">Comparar valores</label>
-              
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btncheck3">Nuevo 2...</label>
-              </div>
+                  </select>
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" value ="no">
+                    <label class="btn btn-outline-primary" for="btncheck1">Comparar valores</label>
+                  </div>
+                  <select id="selectorDos" class="form-select" aria-label="Default select example" disabled>
+                    <option selected default disabled>Seleccione</option>
+                    <option value="dolar">Dólar</option>
+                    <option value="euro">Euro</option>
+                    <option value="ipc">IPC</option>
+                    <option value="tip">Tasa Int. Promedio</option>
+                    <option value="tmc">Tasa Int. Máx. Convencional</option>
+                    <option value="uf">UF</option>
+                    <option value="utm">UTM</option>
+                  </select> 
+                  <span class="input-group-text" id="basic-addon1" >Tipo de Gráfico</span>
+                  <select id="tipoGrafico" class="form-select" aria-label="Default select example">
+                    <option selected default value="line">Gráfico de lineas</option>
+                    <option value="bar">Gráfico de barras</option>
+                    <option value="otro">Otro gráfico</option>
+                  </select> 
+            </div>
+            <div class="input-group mb-3">          
+                <span class="input-group-text" id="basic-addon1" >Periodo</span>
+                <select id="selectorPeriodo" class="form-select" aria-label="Default select example">
+                  <option selected default disabled>Seleccione</option>
+                  <option value="ultimoanno">1) Año a la fecha</option>
+                  <option value="ult12meses">2) Últimos 12 meses</option>
+                  <option value="ult6meses">3) Últimos 6 meses</option>
+                  <option value="selectPeriodo">4) Seleccionar Fechas</option>
+                </select> 
+                  <span class="input-group-text" id="basic-addon1">Fecha Inicial</span>
+                  <input id="inputFechaInicial" type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="2021-05-01">
+                  <span class="input-group-text" id="basic-addon1">Fecha Final</span>
+                  <input id="inputFechaFinal" type="date" class="form-control" aria-label="Username" aria-describedby="basic-addon1" value="2023-05-01">
+
+            </div>
             </div>
         </article>
         <article id="secc_graficos">
